@@ -62,6 +62,18 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+  -- autosave
+    use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+       require("auto-save").setup {
+         enabled = true
+       }
+    end,
+  })
+
+
+
   -- Lua
   use {
     "folke/which-key.nvim",
